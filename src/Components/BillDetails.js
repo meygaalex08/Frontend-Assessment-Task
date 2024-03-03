@@ -15,7 +15,7 @@ class BillDetails extends Component {
     return (
       <div className="billDetailsStyle">
         <h2>Reservation Details</h2>
-        <p>Number of Adult - {this.props.data.adultCount}</p>
+        <p>Number of Adult's - {this.props.data.adultCount}</p>
         <p>Number of Kids - {this.props.data.childCount}</p>
         <p>Date- { this.props.data.date}</p>
         <p>Time - { this.props.data.time}</p>
