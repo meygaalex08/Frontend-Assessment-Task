@@ -26,27 +26,31 @@ class BillingPage extends React.Component{
     }
 
     handleDateChange = (selectedDate) => {
-        if(selectedDate!==""){
+        if(selectedDate!=="")
+    {
         const date = new Date(selectedDate);
 
-// Extract and format the date as "Mar 15 2024"
-const formattedDate = date.toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'short',
-  day: 'numeric',
-});
+        // Extract and format the date as "Mar 15 2024"
+        const formattedDate = date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        });
         this.setState({ date:formattedDate});
-}
-else{
-    this.setState({ date:"Not Chosen"});
-}
     }
+        else
+    {
+            this.setState({ date:"Not Chosen"});
+    }
+   }
 
     handleTimeChange= (time) => {
         if(time!==""){
         this.setState({ time:time});
         }
         else{
+        
+            // Once date is selected and then deselected, change it back to Not Chosen on Billign Details card
             this.setState({ time:"Not Chosen"});
         }
     }
@@ -57,7 +61,7 @@ else{
         <div className="billing-page-container">
         <div className="left-components">
           <HeadCountSelector onCountChange={this.handleHeadCountChange}/>
-          <DateTimePicker  onDateChange={this.handleDateChange} onTimeChange={this.handleTimeChange}/>
+          <DateTimePicker onDateChange={this.handleDateChange} onTimeChange={this.handleTimeChange}/>
         </div>
         <div className="right-components">
           <BillDetails data={this.state}/>

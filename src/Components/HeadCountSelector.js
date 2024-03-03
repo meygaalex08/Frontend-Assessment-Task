@@ -18,6 +18,8 @@ class HeadCountSelector extends React.Component{
     decrement=(flag)=>
     {
      let countTypeToUpdate = `${flag}Count`;
+     
+     // Check to ensure adult/child doesnt go below 0
        if( this.state[countTypeToUpdate]!==0){
         this.setState({ [countTypeToUpdate]: this.state[countTypeToUpdate] - 1 }, () => {
             this.props.onCountChange(this.state.adultCount, this.state.childCount);

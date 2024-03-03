@@ -16,7 +16,7 @@ class DateTimePicker extends React.Component {
             selectedDate: null,
             selectedTime: null,
             times: ['10:00 AM', '12:00 PM', '2:00 PM', '4:00 PM', '6:00 PM', '8:00 PM'],
-            isTimeDisabled: true, // Initially time selection is disabled}
+            isTimeDisabled: true, // Initially time selection is disabled
     }
 }
 
@@ -42,7 +42,7 @@ class DateTimePicker extends React.Component {
 };
 
 
-
+// Function to check if date is past to disable it on UI
   isPastDate = (date) => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
@@ -84,8 +84,6 @@ class DateTimePicker extends React.Component {
       </>
     );
 };
-
-
 
   selectDate = (date) => {
     this.setState({
