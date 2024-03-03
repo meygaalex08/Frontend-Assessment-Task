@@ -1,0 +1,236 @@
+.app-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
+  }
+  
+  .headCountSelectorContainer,
+.childHeadCountSelectorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1; 
+  padding:10px;
+}
+
+
+.headCountText {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  .headCountButtons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+
+  .incrementButton,
+  .decrementButton {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  
+  .roundButton {
+    margin: 15px;
+    font-size: 16px;
+    width: 10px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: black;
+  }
+  
+  .date-time-picker {
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  .date-picker {
+    flex: 1; 
+    padding: 10px;
+    background-color: #FAFAFA;
+    margin-right:15px;
+  }
+  
+  .time-picker{
+    flex: 1; 
+    padding: 10px;
+    background-color: #FAFAFA;
+  }
+  .month-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .arrow {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 24px;
+  }
+  
+.calendar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .weekday-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    padding-left: 0;
+  }
+  
+  .weekday {
+    padding: 5px 0;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+
+.calendar-grid > :first-child {
+    padding-left: 0;
+  }
+  
+
+  .time-slots > :first-child {
+    padding-left: 0;
+  }  
+  
+  .day {
+    padding: 10px;
+    margin: 2px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .day:hover:not(.past):not(.selected) {
+    background-color: transparent; 
+  }
+  
+  .day.past {
+    color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .day.selected {
+    color: orange;
+    position: relative;
+  }
+  
+  .day.selected::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    margin: -16px 0 0 -16px;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid orange;
+  }
+  
+  .day:hover:not(.past):not(.selected) {
+    background-color: #f0f0f0;
+  }
+  
+  .day:focus {
+    outline: none;
+    background-color: #f0f0f0;
+  }
+  
+
+  .time-slots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .time-slot {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .time-slot:hover:not(:disabled) {
+    background-color: #f0f0f0;
+  }
+  
+  .time-slot.selected {
+    border-color: orange;
+    color: orange;
+  }
+  
+  .time-slot:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .time-slot:focus {
+    outline: none;
+  }
+  
+  .billing-page-container {
+    display: flex;
+    width: 100vw; 
+    align-items: stretch; 
+
+  }
+  
+  .left-components {
+    width: 70%;
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .right-components {
+    width: 30%;
+    margin-left: 15px;
+    margin-top: 100px;
+  }
+  
+  .banner{
+    background-color: black;
+    color: white;
+    padding: 15px;
+  }
+  .billDetailsStyle{
+    padding: 20px;
+  }
+
+  .date-time-header{
+    padding:10px;
+    text-align: left;
+    display: flex;
+    align-items: center; 
+
+    div{
+      flex: 1
+    }
+    label{
+      margin-right: 40%;
+    }
+  }
